@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+html{
+    background: url('Projeto/Projeto/FundoOficial.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+main{
+    font-family: 'Press Start 2P';
+    margin: 0 auto;
+    padding-top: 25vh;
+}
+.caixa{
+    font-size: 13px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px black;
+    width: 30vw;
+    height: 45vh;
+    
+}
+.formulario{
+    padding-top: 15%;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-right: 0;
+}
+#botao{
+    text-align: center;
+    
+}
+.pokebola{
+    position: relative;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 46px;
+    height: 100px;
+    /*podemos usar para ver a seleção criada: background-color:darkblue;*/
+    overflow: hidden; /*vai tirar o que está fora do width e height*/
+    
+}
+/*.pokebola_sprite{
+    
+    animation: movimentoPokebola 3s steps(3) ;/* Vamos utilizar o Steps para que a imagem não fique corrida, ou seja, que não fique saindo uma e entrando outra.
+                                         O ideal aqui é que desapareça uma e apareça outra */
+
+
+
+@keyframes movimentoPokebola {
+    from{
+        transform: translate3d(0px,0,0)
+    }
+    to {
+        transform: translate3d(-100%,0,0)
+    }
+}
