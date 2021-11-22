@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Gabriel Forcelini e João Batista">
+    <meta name="description" content="API pokémon">
+    <meta name="keywords" content="Pokémon, Lista, Nintendo">
     <title>Document</title>
 </head>
-
 <body>
-    <header></header>
+    <header>
+        <div class="logo"><img src="Projeto/Projeto/Logo.png" alt="Logo do pokémon" ></div>
+    </header>
     <main>
-        <section class="caixa">
-            <form class="formulario" method="post" action="index.html">
-                <label><input type="text" placeholder="Nome do pokémon" required id="nome"/></label>
-                <label><input type="text" placeholder="Habilidade" required id="habi"/></label>
-                <label><input type="text" placeholder="Tipo" required id="tipo"/></label>
-                <label><input type="number" placeholder="Ataque" required id="atack" /></label>
-                <label><input type="number" placeholder="Defesa" required id="defense" /></label>
-                <label><input type="number" placeholder="Vida" required id="life" /></label>
-                <label><input type="number" placeholder="Velocidade" requiredid="speed" /></label>
+        <section class="caixa" >
+            <form class="formulario">
+                <label><input class="item" type="text" placeholder="Nome do pokémon" required></label>
+                <label><input class="item" type="text" placeholder="Tipo" required></label>
+                <label><input class="item" type="text" placeholder="Habilidade" required></label>
+                <label><input class="item" type="number" placeholder="Ataque" required></label>
+                <label><input class="item" type="number" placeholder="Defesa" required></label>
+                <label><input class="item" type="number" placeholder="Vida" required></label>
+                <label><input class="item" type="number" placeholder="Velocidade" required></label>
                 <label></label>
             </form>
-            <div id="botao"><button id="post">Guardar na Pokedex</button></div>
-            <div class="pokebola">
-                <img src="Projeto/Projeto/POkebolasprite.png" class="pokebola_sprite" />
-            </div>
+        <div id="botao"><button id="post">Capturado!</button></div>
+        <div class="pokebola"> 
+        <img src="Projeto/Projeto/POkebolasprite.png" class="pokebola_sprite" hidden>
+        </div>
         </section>
+        <nav class="prosseguir">
+            <a href="segundaPagina.html" ><img src="Projeto/Projeto/pokedex.png" alt=""></a>
+        </nav>
     </main>
-    <footer></footer>
+    <footer>
+    </footer>
 </body>
-
+    <script>
+const botaoAnimar = document.getElementById("botao");
+const caixafilha = document.querySelector(".pokebola_sprite");
+/*const caixamae = document.querySelector(".pokebola");*/
+botaoAnimar.addEventListener("click", ()=> {
+ /* caixamae.style.animatiom="";
+  setTimeout(() => caixafilha.style.animation = "aumentaPokebola 3s");*/
+  document.querySelector(".pokebola_sprite").removeAttribute("hidden"); //para iniciar com a pokebola sumida
+  caixafilha.style.animation = "";
+  setTimeout(() => caixafilha.style.animation = "movimentoPokebola 4s steps(12) normal forwards");
+});</script>
 <script src="Post.js"></script>
 
 </html>
